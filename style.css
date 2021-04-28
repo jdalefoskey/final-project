@@ -1,0 +1,15 @@
+
+body {
+    max-width: 800px;
+    background-color: lightcyan;
+}
+
+img {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.center {
+    margin-left: 30%;
+    margin-right: 30%;
+}
