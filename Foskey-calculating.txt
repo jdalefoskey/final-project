@@ -1,0 +1,31 @@
+Algorithm for Foskey-calculating.php
+            Include Foskey-inc-calc-functions.php
+            Receive $scoresFile from Foskey-calculating.html
+            While !feof $scoresFile
+            Read $scoresFile
+            Close $scoresFile
+            Create $scores from $scoresFile
+            Call avgArray($scores)
+            Calculate $average
+            Return $average
+            Call highestInArray($scores)
+            Calculate $highestNumber
+            return $highestNumber,
+            Call lowestInArray($scores)
+            Calculate $lowestNumber 
+            Return $lowestNumber 
+            Call numPassingArray($scores)
+            Calcualte $greaterEqual60
+            Return $greaterEqual60
+            Calcualate $totalNumberScores
+            Return $totalNumberScores
+            Open output.txt
+            Write $average,$highestNumber,$lowestNumber,$greaterEqual60,$totalNumberScores
+            Close output
+			Display $image 
+			Display $average
+            Display $highestNumber
+            Display $lowestNumber
+            Display $greaterEqual60
+            Display $totalNumberScores
+END

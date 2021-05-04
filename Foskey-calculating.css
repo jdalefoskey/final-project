@@ -1,14 +1,16 @@
 
+/* setting the width and the background color of the page */
 body {
     max-width: 800px;
     background-color: lightcyan;
 }
 
+/* setting margins for image */
 img {
     margin-left: 30%;
     margin-right: 30%;
 }
-
+/* styling for the center class */
 .center {
     margin-left: 30%;
     margin-right: 30%;

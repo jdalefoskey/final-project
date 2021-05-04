@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- IPO -->
-    <!-- Algorythm
-    
-    
-    -->
+    <!--	Author: 
+			Date:	04/27/21
+			File:	Foskey-calculating.html
+			Purpose: score handling with arrays
+		
+		IPO
+			Inputs: scores1.txt, scores2.txt, scores3.txt
+			Processing: user clicks button to call Foskey-calculating.php
+						Using files scores1.txt, scores2.txt, scores3.txt, and Foskey-inc-calc-function.php
+							Using functions aveArray, highestInArray, lowestInArray, and numPassingArray.php
+              calculate average, highestNumber, lowestNumber, greaterEqual60,
+              Return results
+              Write results to output.txt
+              Display average,
+              Display highestNumber,
+              Display lowestNumber,
+              Display greaterEqual60,
+              Display totalNumScores,
+            End
+			Outputs: 	output.txt, average, highestNumber, lowestNumber,greaterEqual60, totalNumScores
+		
+		Algorithm for Foskey-calculating.html
+			Display image 
+			Prompt for scoresFile,
+			Get scoresFile,
+			Submit scoresFile to Foskey-calculating.php
+		END 
+	-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- link to my style sheet -->
+    <link rel="stylesheet" href="Foskey-calculating.css">
+    <!-- title of the page -->
     <title>Scores & Arrays</title>
 </head>
 <body>
-    <img src="whatsYourScore.jpeg" alt="whats your score logo">
+    <!-- inserted image below -->
+    <img src="Foskey-calculating.jpeg" alt="whats your score logo">
     <h1 class="center">Score Handling with Arrays</h1>
     <p class="center">This program will take your file and perform several actions on the scores.</p>
+    <!-- create the form below -->
     <form action="Foskey-calculating.php" method="post">
         <p class="center">Select your file from the drop down menu below</p>
         <p class="center">
@@ -28,7 +55,9 @@
         </p>
   
         <p class="center">
+          <!-- create a submit button -->
           <input type="submit" value="Calculate" />
+          <!-- create a reset button -->
           <input type="reset" value="Clear" />
         </p>
       </form>
