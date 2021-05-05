@@ -35,15 +35,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Foskey-calculating.css">
     <title>Scores and Arrays</title>
 </head>
 <body>
+    <!-- image file required -->
+    <img src="Foskey-calculating.jpeg" alt="whats your score logo">
     <h1>Arrays with functions</h1>
 
 <?php
+    //  some error reporting to find ALL MY DANG BUGS !!!!
+    error_reporting(E_ALL); ini_set('display_errors','1');
+    // starting with an empty array
     $scores = [];
-    include("Foskey-inc-calc-function.php");
+    // gotta include out functions file
+    include("Foskey-inc-calc-functions.php");
     // get the input from the html file
     $fileName = $_POST['fileName'];
     // Create a variable for the name of the file read
@@ -62,22 +68,22 @@
 
     //  call the avgArray function and store results in a new variable
     $average = avgArray($scores);
-    //  call the highestInArray function and store results in a new variable
+    // //  call the highestInArray function and store results in a new variable
     $highest = highestInArray($scores);
-    //  call the lowestInArray function and store results in a new variable
+    // // //  call the lowestInArray function and store results in a new variable
     $lowest = lowestInArray($scores);
-    //  call the numPassingArray function and store results in a new variable
+    // // //  call the numPassingArray function and store results in a new variable
     $numberPassing = numPassingArray($scores);
-    // create a variable equal to the array length 
+    // // // create a variable equal to the array length 
     $totalNumber = sizeof($scores);
     
-    //  // Open or write  output.txt file to write the results
-    //  $outputFile = fopen("output.txt", "w");
-    // //  // // write the data to the file
-    //  fputs($outputFile, "$scoresFile:$scores");
-    // //  // // after we are done we close the file
-    //  fclose($outputFile); 
-    
+    //  // Open or create output.txt file 
+    $myfile = fopen("output.txt", "w") or die("Unable to open file");
+    //  write the required info to the text file called output.txt
+    fwrite($myfile, "$scoresFile:$average:$highest:$lowest:$numberPassing:$totalNumber");
+    //  close the file after we are done
+    fclose($myfile);
+    //  Print to the screen the required information
      print "<p>Summary for $scoresFile</p>";
      print "<p>Average Score: $average</p>";
      print "<p>Highest Score: $highest</p>";
@@ -88,7 +94,7 @@
 
 ?>
 
-
-    <p><a href="Foskey-calculating.html">Return to beginning</a></p>
+   <!--  Here we have a link back to the main page -->
+    <p><a href="Foskey-calculating.html">Return to input</a></p>
 </body>
 </html>
